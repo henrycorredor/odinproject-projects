@@ -3,11 +3,11 @@
 # @param dictionary [Array<String>] Words dictionary
 # @return [Hash<String, Integer>] Association of words / coincidences number
 def substrings(words, dictionary)
-  out = Hash.new
+  out = Hash.new(0)
 
   words.split(" ").map do |word|
     dictionary.select { |dictionary_word| word.downcase.include?(dictionary_word) }.each do |matched_word|
-      out[matched_word] = out[matched_word].nil? ? 1 : out[matched_word] + 1
+      out[matched_word] += 1
     end
   end
 

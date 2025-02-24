@@ -1,5 +1,4 @@
 # Return ciphered letter or the same character in case is not a letter
-#
 # @param letter [String] Letter to be ciphered
 # @param places [Integer] Places to move to the right
 # @return [String] Ciphered letter

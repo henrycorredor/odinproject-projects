@@ -8,7 +8,7 @@ def bubble_sort(numbers_list)
   until is_ordered
     is_ordered = true
     processing = sorted_list
-    sorted_list = Array.new
+    sorted_list = []
     last_number = processing.reduce do |next_num, num|
       if (num <=> next_num) == -1
         is_ordered = false
@@ -27,5 +27,5 @@ def bubble_sort(numbers_list)
   sorted_list
 end
 
-print bubble_sort([4,3,78,2,0,2])
+print bubble_sort([4, 3, 78, 2, 0, 2])
 # => [0,2,2,3,4,78]

@@ -3,9 +3,8 @@
 # @param places [Integer] Places to move to the right
 # @return [String] Ciphered letter
 def get_cipher_letter(letter, places)
-  low_case_letters = ("a".."z").to_a
-  big_case_letters = ("A".."Z").to_a
-
+  low_case_letters = ('a'..'z').to_a
+  big_case_letters = ('A'..'Z').to_a
   my_index = low_case_letters.index(letter.downcase)
   return letter if my_index.nil?
 
@@ -21,9 +20,8 @@ def get_cipher_letter(letter, places)
   letter
 end
 
-
 def caesar_cipher(to_cipher, places)
-  to_cipher.split("").map{|letter| get_cipher_letter(letter, places)}.join("")
+  to_cipher.split('').map { |letter| get_cipher_letter(letter, places) }.join('')
 end
 
 puts caesar_cipher("What a string!", 5)

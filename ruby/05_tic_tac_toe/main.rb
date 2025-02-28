@@ -13,4 +13,7 @@ player_two_name = User.request_name
 player_two = User.new(player_two_name, 01)
 print "Welcome #{player_two.name}!\n"
 
-print "#{player_one.name} vs. #{player_two.name}"
+print "#{player_one.name} vs. #{player_two.name}\n"
+
+game = TicTacToe.new([player_one, player_two])
+game.start

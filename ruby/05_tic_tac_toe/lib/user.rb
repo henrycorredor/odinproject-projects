@@ -19,18 +19,4 @@ class User
     end
     player_one_name
   end
-
-  def attempt_make_move(move)
-    places = move.split("")
-    column = places[0]
-    row = places[1]
-    valid_input = %w[a b c].include?(column) && [1, 2, 3].include?(row)
-    unless valid_input
-      print "Invalid movement."
-      print "Please input column (a, b, c) + row (1, 2, 3)"
-      print "Ex: right -> b2, c1  /   wrong -> 1a, d5"
-      return valid_input
-    end
-    valid_input
-  end
 end
